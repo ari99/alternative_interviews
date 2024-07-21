@@ -9,15 +9,18 @@ public class FarmCreator {
     public int numCrops = 0;
 
     public void createLand(String farmName, String farmType){
-        System.out.println("Creating land for " + farmName);
+        System.out.println("Creating land for " + farmName + " of type " + farmType);
         int valueToAdd = 0;
         if(farmType == "Cattle") {
             valueToAdd += 5000;
             int count = this.addLandCount;
             while(count > 0){
                 farm += "cow cow cow";
-                System.out.println("adding some cows");
+                System.out.println("adding some cows ");
+                System.out.println("cow care");
                 numCows += 4;
+                System.out.println("total cows " + numCows);
+
                 count--;
             }
         } else if(farmType == "Fish"){
@@ -35,6 +38,8 @@ public class FarmCreator {
             while(count > 0){
                 farm += "crops";
                 System.out.println("adding some crops");
+                System.out.println("water crops");
+                System.out.println("collect seeds");
                 numCrops += 2;
                 count--;
             }

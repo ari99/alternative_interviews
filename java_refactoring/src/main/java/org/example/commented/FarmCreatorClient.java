@@ -46,9 +46,7 @@ public class FarmCreatorClient {
             farm3.addPlants(secondFarmName, "Crops");
         }
         FarmCreatorClient.payTaxes(farm3);  // after refactored to methods, this shouldnt be included, so the method
-                                            // would have a more single purpose
-
-
+                                            // would have a more single purpose-
 
     }
 

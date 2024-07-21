@@ -12,13 +12,16 @@ public class FarmCreator {
     public void createLand(String farmName, String farmType){
         System.out.println("Creating land for " + farmName);
         int valueToAdd = 0;
-        if(farmType == "Cattle") {  // should use .equals method
+        if(farmType == "Cattle") {  // should use .equals method //should have enum instead of string
             valueToAdd += 5000;
             int count = this.addLandCount;
             while(count > 0){ // should be for loop
                 farm += "cow cow cow"; //stringbuilder should be used
-                System.out.println("adding some cows"); // adding farmName to the log would make the log more informative
+                System.out.println("adding some cows "); // adding farmName to the log would make the log more informative
+                System.out.println("cow care"); // adding farmName to the log would make the log more informative
                 numCows += 4;
+                System.out.println("total cows " + numCows);
+
                 count--;
             }
         } else if(farmType == "Fish"){
@@ -26,7 +29,7 @@ public class FarmCreator {
             int count = this.addLandCount;
             while(count > 0){ // should be for loop
                 farm += "fish"; //stringbuilder should be used
-                System.out.println("adding some cows");
+                System.out.println("adding some cows"); // should be fish
                 numFish += 1;
                 count--;
             }
@@ -36,12 +39,14 @@ public class FarmCreator {
             while(count > 0){ // should be for loop
                 farm += "crops"; //stringbuilder should be used
                 System.out.println("adding some crops");
+                System.out.println("water crops"); // adding farmName to the log would make the log more informative
+                System.out.println("collect seeds"); // adding farmName to the log would make the log more informative
                 numCrops += 2;
                 count--;
             }
         }
         valueToAdd -= 10;
-        valueToAdd += valueToAdd * .3;
+        valueToAdd += valueToAdd * .3; //should make rounding explicit
         totalValue += valueToAdd;
     }
 
