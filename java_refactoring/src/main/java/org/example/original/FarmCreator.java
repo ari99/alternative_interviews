@@ -1,31 +1,30 @@
 package org.example.original;
 
 public class FarmCreator {
-    public double totalValue = 0.0; // shouldnt be public (encapsulation)
+    public double totalValue = 0.0;
     public String farm = "";
-    public int addLandCount = 100; // should be static/final constant
+    public int addLandCount = 100;
     public int numCows = 0;
     public int numFish = 0;
     public int numCrops = 0;
 
-    //farmName should be passed in a constructor
     public void createLand(String farmName, String farmType){
         System.out.println("Creating land for " + farmName);
         int valueToAdd = 0;
-        if(farmType == "Cattle") {  // should use .equals method
+        if(farmType == "Cattle") {
             valueToAdd += 5000;
             int count = this.addLandCount;
-            while(count > 0){ // should be for loop
-                farm += "cow cow cow"; //stringbuilder should be used
-                System.out.println("adding some cows"); // adding farmName to the log would make the log more informative
+            while(count > 0){
+                farm += "cow cow cow";
+                System.out.println("adding some cows");
                 numCows += 4;
                 count--;
             }
         } else if(farmType == "Fish"){
             valueToAdd += 2000;
             int count = this.addLandCount;
-            while(count > 0){ // should be for loop
-                farm += "fish"; //stringbuilder should be used
+            while(count > 0){
+                farm += "fish";
                 System.out.println("adding some cows");
                 numFish += 1;
                 count--;
@@ -33,8 +32,8 @@ public class FarmCreator {
         } else if(farmType == "Crops"){
             valueToAdd += 1000;
             int count = this.addLandCount;
-            while(count > 0){ // should be for loop
-                farm += "crops"; //stringbuilder should be used
+            while(count > 0){
+                farm += "crops";
                 System.out.println("adding some crops");
                 numCrops += 2;
                 count--;
@@ -45,7 +44,6 @@ public class FarmCreator {
         totalValue += valueToAdd;
     }
 
-    // farmName isnt used
     public void addPlants(String farmName, String farmType){
         if(farmType == "Cattle") {
             System.out.println("planting grass");
@@ -56,15 +54,15 @@ public class FarmCreator {
         }
     }
 
-    // docstring comments       ///payers isnt used
-    public String payTaxes(int payers){ // should create an object
-        // this.totalValue * .1  //unecessary comment
+
+    public String payTaxes(int payers){
+        // this.totalValue * .1
         String taxInfo = "sales: " + this.totalValue * .1 +":"
                     + "property: " + this.totalValue * .2 + ":"
                     + "income: " + this.totalValue * .3 + ":"
                     + "total: " + this.totalValue * .6;
 
-        return taxInfo; // preference to naming variable to be returned
+        return taxInfo;
 
     }
 

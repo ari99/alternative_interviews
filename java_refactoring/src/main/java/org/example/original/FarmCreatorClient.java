@@ -1,12 +1,9 @@
 package org.example.original;
 
 public class FarmCreatorClient {
-    String firstFarmName = "Farm1";
-    String secondFarmName = "Farm2";
 
-    // use logger instead of system.out
 
-    public static void main(String[] args) { //probabyl shouldnt stay in the static context
+    public static void main(String[] args) {
 
         String firstFarmName = "Farm1";
         String secondFarmName = "Farm2";
@@ -15,7 +12,7 @@ public class FarmCreatorClient {
         final int numLand = 30;
         final int numPlants = 20;
 
-        // Should be loop
+
         System.out.println("Creating number of lands: " + numLand + " num plants: " + numPlants);
         FarmCreator farm1 = new FarmCreator();
         for(int i=0 ; i < numLand; i++) {
@@ -41,24 +38,22 @@ public class FarmCreatorClient {
         System.out.println("Creating number of lands: " + numLand + " num plants: " + numPlants);
         FarmCreator farm3 = new FarmCreator();
         for(int i=0 ; i < numLand; i++) {
-            farm3.createLand(secondFarmName, "Crops"); //BUG this should be thirdFarmName
+            farm3.createLand(secondFarmName, "Crops");
         }
         for(int i=0 ; i < numPlants; i++) {
             farm3.addPlants(secondFarmName, "Crops");
         }
-        FarmCreatorClient.payTaxes(farm3);  // after refactored to methods, this shouldnt be included, so the method
-                                            // would have a more single purpose
+        FarmCreatorClient.payTaxes(farm3);
 
 
 
     }
 
-    //probably should have moved out of static conext
     public static void payTaxes(FarmCreator farm) {
         System.out.println("paying taxes");
-                                            // unnamed number
-        String farmOutput = farm.payTaxes(5);//should be named differently because the current method is payTaxes
-        String[] splitOutput = farmOutput.split(":"); // should have used an object
+
+        String farmOutput = farm.payTaxes(5);
+        String[] splitOutput = farmOutput.split(":");
         /* String taxInfo = "sales: " + this.totalValue * .1 +":"
                 + "property: " + this.totalValue * .2 + ":"
                 + "income: " + this.totalValue * .3 + ":"

@@ -1,10 +1,9 @@
 package org.example.commented;
 
 public class FarmCreatorClient {
-    String firstFarmName = "Farm1";
-    String secondFarmName = "Farm2";
 
     // use logger instead of system.out
+
 
     public static void main(String[] args) { //probabyl shouldnt stay in the static context
 
