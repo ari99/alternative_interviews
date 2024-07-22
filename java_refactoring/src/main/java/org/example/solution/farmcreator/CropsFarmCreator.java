@@ -9,11 +9,13 @@ public class CropsFarmCreator extends FarmCreator {
         super(farmName, FarmType.fromString("crops"));
     }
 
+    @Override
     public int getValueToAdd() {
         return 1000;
     }
 
     //farmName should be passed in a constructor
+    @Override
     public void createLandType() {
         System.out.println("Creating land for " + this.farmName);
         for (int count = 0; count < FarmCreator.ADD_LAND_COUNT; count++) {
@@ -26,6 +28,7 @@ public class CropsFarmCreator extends FarmCreator {
     }
 
     // farmName isnt used
+    @Override
     public void addPlants() {
         System.out.println("Planting clover");
     }

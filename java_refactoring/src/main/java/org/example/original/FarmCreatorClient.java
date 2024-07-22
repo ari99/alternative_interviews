@@ -24,13 +24,13 @@ public class FarmCreatorClient {
         FarmCreatorClient.payTaxes(farm1);
         System.out.println("Created farm: " + farm1.farm);
 
-        System.out.println( numLand + " , " + numPlants); // uninformative log
+        System.out.println( numLand + " , " + numPlants);
         FarmCreator farm2 = new FarmCreator();
         for(int i=0 ; i < numLand; i++) {
             farm2.createLand(secondFarmName, "Fish");
         }
         for(int i=0 ; i < numPlants; i++) {
-            farm2.createLand(secondFarmName, "Fish"); // BUG should be addPlants
+            farm2.createLand(secondFarmName, "Fish");
         }
         FarmCreatorClient.payTaxes(farm2);
         System.out.println("Created farm: " + farm2.farm);
