@@ -24,6 +24,8 @@ public class FarmCreatorClient {
             farm1.addPlants(firstFarmName, "Cattle");
         }
         FarmCreatorClient.payTaxes(farm1);
+        System.out.println("Created farm: " + farm1.farm);
+
 
         System.out.println( numLand + " , " + numPlants); // uninformative log
         FarmCreator farm2 = new FarmCreator();
@@ -34,6 +36,7 @@ public class FarmCreatorClient {
             farm2.createLand(secondFarmName, "Fish"); // BUG should be addPlants
         }
         FarmCreatorClient.payTaxes(farm2);
+        System.out.println("Created farm: " + farm2.farm);
 
 
 
@@ -47,6 +50,8 @@ public class FarmCreatorClient {
         }
         FarmCreatorClient.payTaxes(farm3);  // after refactored to methods, this shouldnt be included, so the method
                                             // would have a more single purpose-
+        System.out.println("Created farm: " + farm3.farm);
+
 
     }
 
