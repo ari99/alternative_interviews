@@ -10,7 +10,7 @@ public class FarmCreatorClient {
     // use logger instead of system.out
 
 
-    public static void main(String[] args) { //probabyl shouldnt stay in the static context
+    public static void main(String[] args) { //Shouldnt stay in the static context
         FarmCreatorClient farmCreatorClient = new FarmCreatorClient();
         farmCreatorClient.createFarmsAll();
     }
@@ -62,7 +62,7 @@ public class FarmCreatorClient {
     }
 
 
-    //probably should have moved out of static conext
+    // Moved out of static conext
     private void payTaxes(TaxInfo taxInfo) {
         System.out.println("paying taxes");
 

@@ -5,7 +5,7 @@ public class FarmCreatorClient {
     // use logger instead of system.out
 
 
-    public static void main(String[] args) { //probabyl shouldnt stay in the static context
+    public static void main(String[] args) { //probably shouldn't stay in the static context
 
         String firstFarmName = "Farm1";
         String secondFarmName = "Farm2";
