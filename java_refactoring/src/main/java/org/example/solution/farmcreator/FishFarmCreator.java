@@ -26,7 +26,6 @@ public class FishFarmCreator extends FarmCreator {
         }
     }
 
-    // farmName isnt used
     @Override
     public void addPlants() {
         System.out.println("Planting clover");

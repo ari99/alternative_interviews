@@ -26,7 +26,6 @@ public class CattleFarmCreator  extends FarmCreator {
         }
     }
 
-    // farmName isnt used
     @Override
     public void addPlants(){
             System.out.println("planting grass");

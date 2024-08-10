@@ -1,5 +1,6 @@
 package org.example.solution;
 
+// This class isn't being used currently but included for demonstration purposes
 public enum FarmType {
     CATTLE,
     FISH,

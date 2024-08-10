@@ -4,9 +4,9 @@ import org.example.solution.FarmType;
 import org.example.solution.TaxInfo;
 
 public abstract class FarmCreator {
-    private double totalValue = 0.0; // shouldnt be public (encapsulation)
-    protected StringBuilder farm = new StringBuilder(); // should be a stringbuilder
-    protected static final int ADD_LAND_COUNT = 100; // should be static/final constant
+    private double totalValue = 0.0;
+    protected StringBuilder farm = new StringBuilder();
+    protected static final int ADD_LAND_COUNT = 100; 
     protected int numCreated = 0;
     protected final String farmName;
     private final FarmType farmType;
@@ -44,7 +44,7 @@ public abstract class FarmCreator {
         totalValue += valueToAdd;
     }
 
-    // docstring comments       ///payers isnt used
+    // add docstring comments
     public TaxInfo createTaxes(){ // should create an object
         TaxInfo taxInfo = new TaxInfo(this.totalValue);
         return taxInfo; // preference to naming variable to be returned
