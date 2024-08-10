@@ -14,8 +14,8 @@ public class FarmCreatorClient {
         final int numLand = 30;
         final int numPlants = 20;
 
-        // Should be loop
         System.out.println("Creating number of lands: " + numLand + " num plants: " + numPlants);
+        // Should be function
         FarmCreator farm1 = new FarmCreator();
         for(int i=0 ; i < numLand; i++) {
             farm1.createLand(firstFarmName, "Cattle");

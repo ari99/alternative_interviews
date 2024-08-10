@@ -6,7 +6,7 @@ import org.example.solution.TaxInfo;
 public abstract class FarmCreator {
     private double totalValue = 0.0;
     protected StringBuilder farm = new StringBuilder();
-    protected static final int ADD_LAND_COUNT = 100; 
+    protected static final int ADD_LAND_COUNT = 100;
     protected int numCreated = 0;
     protected final String farmName;
     private final FarmType farmType;
