@@ -18,8 +18,8 @@ export class FarmCreator {
             let count = addLandCount; //missing type
             while(count > 0){ // should be for loop
                 this.farm += "cow cow cow";
-                console.log(`Adding some cows for ${farmName}`); // adding farmName to the log would make the log more informative
-                console.log(`Cow care for ${farmName}`); // adding farmName to the log would make the log more informative
+                console.log(`Adding some cows`); // adding farmName to the log would make the log more informative
+                console.log(`Cow care`); // adding farmName to the log would make the log more informative
                 this.numCows += 4;
                 console.log(`Total cows: ${this.numCows}`);
 
@@ -29,8 +29,8 @@ export class FarmCreator {
             valueToAdd += 2000;
             let count = addLandCount;
             while(count > 0){ // should be for loop
-                this.farm += "fish"; // StringBuilder should be used
-                console.log(`Adding some fish for ${farmName}`); // should be fish
+                this.farm += "fish";
+                console.log(`Adding some cows`); // should be fish
                 this.numFish += 1;
                 count--;
             }
@@ -38,10 +38,10 @@ export class FarmCreator {
             valueToAdd += 1000;
             let count = addLandCount;
             while(count > 0){ // should be for loop
-                this.farm += "crops"; // StringBuilder should be used
-                console.log(`Adding some crops for ${farmName}`);
-                console.log(`Water crops for ${farmName}`); // adding farmName to the log would make the log more informative
-                console.log(`Collect seeds from ${farmName}`); // adding farmName to the log would make the log more informative
+                this.farm += "crops";
+                console.log(`Adding some crops`);
+                console.log(`Water crops`); // adding farmName to the log would make the log more informative
+                console.log(`Collect seeds`); // adding farmName to the log would make the log more informative
                 this.numCrops += 2;
                 count--;
             }

@@ -16,8 +16,8 @@ export class FarmCreator {
             let count = addLandCount;
             while(count > 0){
                 this.farm += "cow cow cow";
-                console.log(`Adding some cows for ${farmName}`);
-                console.log(`Cow care for ${farmName}`);
+                console.log(`Adding some cows`);
+                console.log(`Cow care}`);
                 this.numCows += 4;
                 console.log(`Total cows: ${this.numCows}`);
 
@@ -28,7 +28,7 @@ export class FarmCreator {
             let count = addLandCount;
             while(count > 0){
                 this.farm += "fish";
-                console.log(`Adding some fish for ${farmName}`);
+                console.log(`Adding some cows`);
                 this.numFish += 1;
                 count--;
             }
@@ -37,9 +37,9 @@ export class FarmCreator {
             let count = addLandCount;
             while(count > 0){
                 this.farm += "crops";
-                console.log(`Adding some crops for ${farmName}`);
-                console.log(`Water crops for ${farmName}`);
-                console.log(`Collect seeds from ${farmName}`);
+                console.log(`Adding some crops`);
+                console.log(`Water crops`);
+                console.log(`Collect seeds`);
                 this.numCrops += 2;
                 count--;
             }
