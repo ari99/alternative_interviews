@@ -19,16 +19,16 @@ public class CattleFarmCreator  extends FarmCreator {
         System.out.println("Creating land for " + this.farmName);
         for(int count=0; count < FarmCreator.ADD_LAND_COUNT; count++){
             this.farm.append("cow cow cow"); //stringbuilder should be used
-            System.out.println("adding some cows "); // adding farmName to the log would make the log more informative
-            System.out.println("cow care"); // adding farmName to the log would make the log more informative
+            System.out.println("adding some cows " + this.farmName); // adding farmName to the log would make the log more informative
+            System.out.println("cow care " + this.farmName); // adding farmName to the log would make the log more informative
             this.numCreated += 4;
-            System.out.println("total cows " + numCreated);
+            System.out.println("total cows " + numCreated + " for farm " + this.farmName);
         }
     }
 
     @Override
     public void addPlants(){
-            System.out.println("planting grass");
+            System.out.println("planting grass for farm " + this.farmName);
     }
 
 

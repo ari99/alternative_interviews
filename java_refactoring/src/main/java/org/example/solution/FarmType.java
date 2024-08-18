@@ -1,6 +1,7 @@
 package org.example.solution;
 
-// This class isn't being used currently but included for demonstration purposes
+// This class isn't being used currently but included for demonstration purposes. It could be used for example in a factory
+// method to create a farm of a specific type.
 public enum FarmType {
     CATTLE,
     FISH,

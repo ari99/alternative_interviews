@@ -20,16 +20,16 @@ public class CropsFarmCreator extends FarmCreator {
         System.out.println("Creating land for " + this.farmName);
         for (int count = 0; count < FarmCreator.ADD_LAND_COUNT; count++) {
             this.farm.append( "crops");
-            System.out.println("adding some crops");
-            System.out.println("water crops"); // adding farmName to the log would make the log more informative
-            System.out.println("collect seeds"); // adding farmName to the log would make the log more informative
+            System.out.println("adding some crops " + this.farmName); // adding farmName to the log would make the log more informative
+            System.out.println("water crops " + this.farmName); // adding farmName to the log would make the log more informative
+            System.out.println("collect seeds " + this.farmName ); // adding farmName to the log would make the log more informative
             this.numCreated += 2;
         }
     }
 
     @Override
     public void addPlants() {
-        System.out.println("Planting clover");
+        System.out.println("Planting clover " + this.farmName);
     }
 
 

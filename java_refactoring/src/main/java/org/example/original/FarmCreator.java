@@ -62,10 +62,10 @@ public class FarmCreator {
 
     public String payTaxes(int payers){
         // this.totalValue * .1
-        String taxInfo = "sales: " + this.totalValue * .1 +":"
-                    + "property: " + this.totalValue * .2 + ":"
-                    + "income: " + this.totalValue * .3 + ":"
-                    + "total: " + this.totalValue * .6;
+        String taxInfo = "sales:" + this.totalValue * .1 +":"
+                    + "property:" + this.totalValue * .2 + ":"
+                    + "income:" + this.totalValue * .3 + ":"
+                    + "total:" + this.totalValue * .6;
 
         return taxInfo;
 

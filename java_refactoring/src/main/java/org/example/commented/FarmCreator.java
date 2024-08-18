@@ -64,10 +64,10 @@ public class FarmCreator {
     // docstring comments       ///payers isnt used
     public String payTaxes(int payers){ // should create an object
         // this.totalValue * .1  //unecessary comment
-        String taxInfo = "sales: " + this.totalValue * .1 +":"
-                    + "property: " + this.totalValue * .2 + ":"
-                    + "income: " + this.totalValue * .3 + ":"
-                    + "total: " + this.totalValue * .6;
+        String taxInfo = "sales:" + this.totalValue * .1 +":"
+                    + "property:" + this.totalValue * .2 + ":"
+                    + "income:" + this.totalValue * .3 + ":"
+                    + "total:" + this.totalValue * .6;
 
         return taxInfo; // preference to naming variable to be returned
 

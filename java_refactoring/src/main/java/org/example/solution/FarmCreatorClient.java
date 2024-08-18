@@ -15,6 +15,8 @@ public class FarmCreatorClient {
         farmCreatorClient.createFarmsAll();
     }
 
+    // Javadoc comments should be added as well
+    // This could be replaced by a factory pattern using the FarmType enum
     public void createFarmsAll(){
         String cattleFarmName = "Farm1";
         FarmCreator cattleFarmCreator = new CattleFarmCreator(cattleFarmName);
@@ -34,6 +36,8 @@ public class FarmCreatorClient {
     }
 
     private String createFarm(FarmCreator farmCreator){
+        // preferable to not rely on pass by reference so that it is clear the farmCreator variable is being modified
+        // Another possible solution would be to separate the managment of FarmCreator.farm from FarmCreator
         farmCreator = this.createLand(farmCreator);
         farmCreator = this.addPlants(farmCreator);
         TaxInfo taxInfo = farmCreator.createTaxes();
@@ -48,7 +52,7 @@ public class FarmCreatorClient {
         for(int i=0 ; i < numLand; i++) {
             farmCreator.createLand();
         }
-        return farmCreator; // preferable to not rely on pass by reference to keep the code more explainable
+        return farmCreator; // preferable to not rely on pass by reference
     }
 
     private FarmCreator addPlants(FarmCreator farmCreator){
@@ -58,7 +62,7 @@ public class FarmCreatorClient {
         for(int i=0 ; i < numPlants; i++) {
             farmCreator.addPlants();
         }
-        return farmCreator; // preferable to not rely on pass by reference to keep the code more explainable
+        return farmCreator; // preferable to not rely on pass by reference
     }
 
 

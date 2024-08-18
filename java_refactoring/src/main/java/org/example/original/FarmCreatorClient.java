@@ -57,10 +57,10 @@ public class FarmCreatorClient {
 
         String farmOutput = farm.payTaxes(5);
         String[] splitOutput = farmOutput.split(":");
-        /* String taxInfo = "sales: " + this.totalValue * .1 +":"
-                + "property: " + this.totalValue * .2 + ":"
-                + "income: " + this.totalValue * .3 + ":"
-                + "total: " + this.totalValue * .6;*/
+        /* String taxInfo = "sales:" + this.totalValue * .1 +":"
+                + "property:" + this.totalValue * .2 + ":"
+                + "income:" + this.totalValue * .3 + ":"
+                + "total:" + this.totalValue * .6;*/
         String total = splitOutput[7];
         String propertyTax  = splitOutput[3];
         System.out.println("Paying total tax: " + total + " property tax: " + propertyTax);
