@@ -67,10 +67,10 @@ export class FarmCreator {
     // docstring comments       /// payers isn't used
     payTaxes(payers) { // should create an object
         // this.totalValue * .1  // unnecessary comment
-        let taxInfo = `sales: ${this.totalValue * 0.1}:` //missing type
-            + `property: ${this.totalValue * 0.2}:` // should be const
-            + `income: ${this.totalValue * 0.3}:`
-            + `total: ${this.totalValue * 0.6}`;
+        let taxInfo = `sales:${this.totalValue * 0.1}:` //missing type
+            + `property:${this.totalValue * 0.2}:` // should be const
+            + `income:${this.totalValue * 0.3}:`
+            + `total:${this.totalValue * 0.6}`;
 
         return taxInfo; // preference to naming variable to be returned
     }
