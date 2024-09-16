@@ -14,7 +14,7 @@ class FarmCreatorClient {
         let numPlants: number = 20;
 
         console.log(`Creating number of lands: ${numLand} num plants: ${numPlants}`);
-        // Should be a function
+        // The following repeated lines should be a function
         let farm1 = new FarmCreator(); // missing type //should be const
         for(let i = 0; i < numLand; i++) { //missing type
             farm1.createLand(firstFarmName, "Cattle");
@@ -22,6 +22,9 @@ class FarmCreatorClient {
         for(let i = 0; i < numPlants; i++) {
             farm1.addPlants(firstFarmName, "Cattle");
         }
+        // using "this" to call a static method is allowed in Typescipt,
+        // however FarmCreator.payTaxes(farm1); would be preferable to make it clear it is a static
+        // method
         this.payTaxes(farm1);
         console.log(`Created farm: ${farm1.farm}`);
 

@@ -8,8 +8,8 @@ export class FarmCreator {
 
     createLand(farmName, farmType) {
         console.log(`Creating land for ${farmName}`);
-        let valueToAdd: number = 0;
-        let addLandCount: number = 100;
+        let valueToAdd = 0;
+        let addLandCount = 100;
 
         if(farmType == "Cattle") {
             valueToAdd += 5000;
@@ -17,8 +17,8 @@ export class FarmCreator {
             while(count > 0){
                 this.farm += "cow cow cow";
                 console.log(`Adding some cows`);
-                console.log(`Cow care}`);
-                this.numCows += 4;
+                console.log(`Cow care`);
+                this.numCows += 3;
                 console.log(`Total cows: ${this.numCows}`);
 
                 count--;
@@ -36,7 +36,7 @@ export class FarmCreator {
             valueToAdd += 1000;
             let count = addLandCount;
             while(count > 0){
-                this.farm += "crops";
+                this.farm += "crops crops";
                 console.log(`Adding some crops`);
                 console.log(`Water crops`);
                 console.log(`Collect seeds`);
@@ -51,11 +51,11 @@ export class FarmCreator {
 
 
     addPlants(farmName, farmType) {
-        if(farmType === "Cattle") {
+        if(farmType == "Cattle") {
             console.log("Planting grass");
-        } else if(farmType === "Fish"){
+        } else if(farmType == "Fish"){
             console.log("Planting algae");
-        }  else if(farmType === "Crops"){
+        }  else if(farmType == "Crops"){
             console.log("Planting clover");
         }
     }

@@ -6,12 +6,13 @@ export class FarmCreator {
     public numFish: number = 0;
     public numCrops: number = 0;
 
+    // preferable to define visibility - default is public
     // farmName should be passed in a constructor
     // missing parameter types
     createLand(farmName, farmType) { // missing return type
         console.log(`Creating land for ${farmName}`);
-        let valueToAdd: number = 0;
-        let addLandCount: number = 100; // should be static/final constant
+        let valueToAdd = 0;  //missing type
+        let addLandCount = 100; // should be static/final constant
 
         if(farmType == "Cattle") {   // should have enum instead of string
             valueToAdd += 5000;
@@ -20,7 +21,7 @@ export class FarmCreator {
                 this.farm += "cow cow cow";
                 console.log(`Adding some cows`); // adding farmName to the log would make the log more informative
                 console.log(`Cow care`); // adding farmName to the log would make the log more informative
-                this.numCows += 4;
+                this.numCows += 3;
                 console.log(`Total cows: ${this.numCows}`);
 
                 count--;
@@ -51,18 +52,20 @@ export class FarmCreator {
         this.totalValue += valueToAdd;
     }
 
+    // preferable to define visibility
     // missing param and return types
     // farmName isn't used
     addPlants(farmName, farmType) {
-        if(farmType === "Cattle") {
+        if(farmType == "Cattle") {
             console.log("Planting grass");
-        } else if(farmType === "Fish"){
+        } else if(farmType == "Fish"){
             console.log("Planting algae");
-        }  else if(farmType === "Crops"){
+        }  else if(farmType == "Crops"){
             console.log("Planting clover");
         }
     }
 
+    // preferable to define visibility
     // missing param and return types
     // docstring comments       /// payers isn't used
     payTaxes(payers) { // should create an object
