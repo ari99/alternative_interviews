@@ -1,5 +1,6 @@
 
 
-The code for the interviewee to comment on is in org.example.original. Then the code with comments on it is in
-org.example.commentted. The refactored code is in org.example.solution.
+The code for the interviewee to comment on is in `org.example.test` and `org.example2.test`.
+The code with comments pointing out issues is in `org.example.commented` and `org.example2.commented`.
+The refactored examples are in `org.example.solution` and `org.example2.solution`.
 

@@ -1,4 +1,4 @@
-This repository contains example code and solutions for interviews that focus on relevant skills and knowledge for software engineering. Example code for Java and TypeScript is provided so far, with example refactoring provided in Java.
+This repository contains example code and solutions for interviews that focus on relevant skills and knowledge for software engineering. Example code and refactoring solutions for Java and TypeScript are provided so far.
 
 The purpose of this form of interviews is to test the type of skills detailed in books like Martin Fowler's "Refactoring" and Robert Martin's "Clean Code".
 

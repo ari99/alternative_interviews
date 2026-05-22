@@ -55,12 +55,6 @@ class FarmCreatorClient {
 
         const farmOutput: string = farm.payTaxes(5);
         const splitOutput: string[] = farmOutput.split(":");
-        /*
-        const taxInfo = "sales: " + this.totalValue * .1 + ":"
-                + "property: " + this.totalValue * .2 + ":"
-                + "income: " + this.totalValue * .3 + ":"
-                + "total: " + this.totalValue * .6;
-        */
         const total: string = splitOutput[7];
         const propertyTax: string = splitOutput[3];
         console.log(`Paying total tax: ${total} property tax: ${propertyTax}`);

@@ -1,4 +1,4 @@
-package org.example.original;
+package org.example.test;
 
 public class FarmCreator {
     public double totalValue = 0.0;
@@ -68,7 +68,6 @@ public class FarmCreator {
                     + "total:" + this.totalValue * .6;
 
         return taxInfo;
-
     }
 
 

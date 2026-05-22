@@ -2,10 +2,10 @@ import {FarmCreator} from "./FarmCreator";
 
 class FarmCreatorClient {
 
-    // use logger instead of console.log
+    // Use a logger abstraction instead of console.log so output can be configured and tested.
 
-    public static main(): void { // probably shouldn't stay in the static context
-        // should be const
+    public static main(): void { // Move workflow logic out of static context so it can be tested with dependencies.
+        // Use const for values that are assigned once and never reassigned.
         let firstFarmName: string = "Farm1";
         let secondFarmName: string = "Farm2";
         let thirdFarmName: string = "Farm3";
@@ -14,28 +14,26 @@ class FarmCreatorClient {
         let numPlants: number = 20;
 
         console.log(`Creating number of lands: ${numLand} num plants: ${numPlants}`);
-        // The following repeated lines should be a function
-        let farm1 = new FarmCreator(); // missing type //should be const
-        for(let i = 0; i < numLand; i++) { //missing type
+        // Extract the repeated farm creation workflow into a function that accepts farm name and type.
+        let farm1 = new FarmCreator(); // Add an explicit type or use const because this reference is not reassigned.
+        for(let i = 0; i < numLand; i++) { // Add a type annotation if the style guide requires explicit loop counter types.
             farm1.createLand(firstFarmName, "Cattle");
         }
         for(let i = 0; i < numPlants; i++) {
             farm1.addPlants(firstFarmName, "Cattle");
         }
-        // using "this" to call a static method is allowed in Typescipt,
-        // however FarmCreator.payTaxes(farm1); would be preferable to make it clear it is a static
-        // method
+        // Calling a static method through this works, but the class name makes the static dispatch clearer.
         this.payTaxes(farm1);
         console.log(`Created farm: ${farm1.farm}`);
 
 
-        console.log(`${numLand} , ${numPlants}`); // uninformative log
+        console.log(`${numLand} , ${numPlants}`); // This log lacks labels, so readers cannot tell what the numbers mean.
         let farm2 = new FarmCreator();
         for(let i = 0; i < numLand; i++) {
             farm2.createLand(secondFarmName,"Fish");
         }
         for(let i = 0; i < numPlants; i++) {
-            farm2.createLand(secondFarmName, "Fish"); // BUG should be addPlants
+            farm2.createLand(secondFarmName, "Fish"); // BUG: this should add plants, not create more fish land.
         }
         this.payTaxes(farm2);
         console.log(`Created farm: ${farm2.farm}`);
@@ -44,23 +42,22 @@ class FarmCreatorClient {
         console.log(`Creating number of lands: ${numLand} num plants: ${numPlants}`);
         let farm3 = new FarmCreator();
         for(let i = 0; i < numLand; i++) {
-            farm3.createLand(secondFarmName,"Crops"); // BUG this should be thirdFarmName
+            farm3.createLand(secondFarmName,"Crops"); // BUG: this should use thirdFarmName, otherwise Farm3 work is logged as Farm2.
         }
         for(let i = 0; i < numPlants; i++) {
             farm3.addPlants(secondFarmName,"Crops");
         }
-        this.payTaxes(farm3); // after refactoring to methods, this shouldn't be included, so the method
-                              // would have a more single purpose-
+        this.payTaxes(farm3); // After extracting methods, keep tax payment separate from farm construction for single responsibility.
         console.log(`Created farm: ${farm3.farm}`);
 
     }
 
-    // probably should move out static context
+    // Move out of static context so tax payment can be tested and configured independently.
     public static payTaxes(farm: FarmCreator): void {
         console.log("Paying taxes");
-        // unnamed number
-        const farmOutput: string = farm.payTaxes(5); // should be named differently because the current method is payTaxes
-        const splitOutput: string[] = farmOutput.split(":"); // should have used an object
+        // Replace the unnamed number with a named constant or remove it if the callee does not use it.
+        const farmOutput: string = farm.payTaxes(5); // Use a clearer name like taxInfoText because this method is also named payTaxes.
+        const splitOutput: string[] = farmOutput.split(":"); // Prefer returning a tax object instead of splitting a positional string.
         /*
         const taxInfo = "sales: " + this.totalValue * .1 + ":"
                 + "property: " + this.totalValue * .2 + ":"

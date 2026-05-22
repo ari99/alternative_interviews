@@ -61,7 +61,6 @@ export class FarmCreator {
     }
 
     payTaxes(payers) {
-        // this.totalValue * .1
         let taxInfo = `sales:${this.totalValue * 0.1}:`
             + `property:${this.totalValue * 0.2}:`
             + `income:${this.totalValue * 0.3}:`

@@ -1,4 +1,4 @@
-package org.example.original;
+package org.example.test;
 
 public class FarmCreatorClient {
 
